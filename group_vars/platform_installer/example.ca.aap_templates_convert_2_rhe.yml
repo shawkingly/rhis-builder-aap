@@ -21,7 +21,7 @@ templates_convert_2_rhel:
       enable_debug_logging: false
       satellite_validate_certs: true
       platform_hosts:
-        - fqdn: "centosdemo1.{{ _global_domain_name }}"
+        - fqdn: "centosdemo1.{{ global_domain_name }}"
           delete_host: false
           organization: "Default Organization"
           location: "Default Location"
@@ -31,7 +31,7 @@ templates_convert_2_rhel:
           mac: "00:50:56:ff:ff:ff"
           comment: "c2r_demo_host deleteme"
 
-        - fqdn: "centosdemo2.{{ _global_domain_name }}"
+        - fqdn: "centosdemo2.{{ global_domain_name }}"
           delete_host: false
           organization: "Default Organization"
           location: "Default Location"
@@ -41,7 +41,7 @@ templates_convert_2_rhel:
           mac: "00:50:56:ff:ff:ff"
           comment: "c2r_demo_host deleteme"
 
-        - fqdn: "oeldemo1.{{ _global_domain_name }}"
+        - fqdn: "oeldemo1.{{ global_domain_name }}"
           delete_host: false
           organization: "Default Organization"
           location: "Default Location"
@@ -51,7 +51,7 @@ templates_convert_2_rhel:
           mac: "00:50:56:ff:ff:ff"
           comment: "c2r_demo_host deleteme"
 
-        - fqdn: "oeldemo2.{{ _global_domain_name }}"
+        - fqdn: "oeldemo2.{{ global_domain_name }}"
           delete_host: false
           organization: "Default Organization"
           location: "Default Location"

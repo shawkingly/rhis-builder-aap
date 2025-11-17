@@ -16,20 +16,20 @@ templates_vm_day_2:
     variables:
       vault_path: "vars/vault.yml"
       vars_path: "vars/main.yml"
-      vcenter_hostname: "vcenter.{{ _global_domain_name }}"
-      datacenter_name: "{{ _global_domain_name }}"
-      datacenter_folder: "{{ _global_domain_name }}/vm"
+      vcenter_hostname: "vcenter.{{ global_domain_name }}"
+      datacenter_name: "{{ global_domain_name }}"
+      datacenter_folder: "{{ global_domain_name }}/vm"
       vmware_validate_certs: true
       host_list:
-        - name: testjboss2.{{ _global_domain_name }}
+        - name: testjboss2.{{ global_domain_name }}
           snap_name: testjboss2.original
           snap_description: "test base jboss build - delete me"
           quiesce: true
-        - name: testlamp2.{{ _global_domain_name }}
+        - name: testlamp2.{{ global_domain_name }}
           snap_name: testlamp2.original
           snap_description: "test base LAMP build - delete me"
           quiesce: true
-        - name: testwordpress2.{{ _global_domain_name }}
+        - name: testwordpress2.{{ global_domain_name }}
           snap_name: testwordpress2.original
           snap_description: "test base WordPress build - delete me"
           quiesce: true
@@ -50,14 +50,14 @@ templates_vm_day_2:
       enable_debug_logging: true
       vault_path: "vars/vault.yml"
       vars_path: "vars/main.yml"
-      vcenter_hostname: "vcenter.{{ _global_domain_name }}"
-      datacenter_name: "{{ _global_domain_name }}"
-      datacenter_folder: "/{{ _global_domain_name }}/vm"
+      vcenter_hostname: "vcenter.{{ global_domain_name }}"
+      datacenter_name: "{{ global_domain_name }}"
+      datacenter_folder: "/{{ global_domain_name }}/vm"
       vmware_validate_certs: true
       host_list:
-        - name: testjboss.{{ _global_domain_name }}
-        - name: testlamp.{{ _global_domain_name }}
-        - name: testwordpress.{{ _global_domain_name }}
+        - name: testjboss.{{ global_domain_name }}
+        - name: testlamp.{{ global_domain_name }}
+        - name: testwordpress.{{ global_domain_name }}
 
   - name: "VMwarePowerOnVM"
     description: "Power-on test machines"
@@ -75,14 +75,14 @@ templates_vm_day_2:
       enable_debug_logging: true
       vault_path: "vars/vault.yml"
       vars_path: "vars/main.yml"
-      vcenter_hostname: "vcenter.{{ _global_domain_name }}"
-      datacenter_name: "{{ _global_domain_name }}"
-      datacenter_folder: "/{{ _global_domain_name }}/vm"
+      vcenter_hostname: "vcenter.{{ global_domain_name }}"
+      datacenter_name: "{{ global_domain_name }}"
+      datacenter_folder: "/{{ global_domain_name }}/vm"
       vmware_validate_certs: true
       host_list:
-        - name: testjboss.{{ _global_domain_name }}
-        - name: testlamp.{{ _global_domain_name }}
-        - name: testwordpress.{{ _global_domain_name }}
+        - name: testjboss.{{ global_domain_name }}
+        - name: testlamp.{{ global_domain_name }}
+        - name: testwordpress.{{ global_domain_name }}
 
   - name: "VMwareRebootGuestOS"
     description: "Reboot test machines"
@@ -100,14 +100,14 @@ templates_vm_day_2:
       enable_debug_logging: true
       vault_path: "vars/vault.yml"
       vars_path: "vars/main.yml"
-      vcenter_hostname: "vcenter.{{ _global_domain_name }}"
-      datacenter_name: "{{ _global_domain_name }}"
-      datacenter_folder: "/{{ _global_domain_name }}/vm"
+      vcenter_hostname: "vcenter.{{ global_domain_name }}"
+      datacenter_name: "{{ global_domain_name }}"
+      datacenter_folder: "/{{ global_domain_name }}/vm"
       vmware_validate_certs: true
       host_list:
-        - name: testjboss.{{ _global_domain_name }}
-        - name: testlamp.{{ _global_domain_name }}
-        - name: testwordpress.{{ _global_domain_name }}
+        - name: testjboss.{{ global_domain_name }}
+        - name: testlamp.{{ global_domain_name }}
+        - name: testwordpress.{{ global_domain_name }}
 
   - name: "VMwareRemoveAllSnaps"
     description: "Remove all snapshots from test machines"
@@ -125,20 +125,20 @@ templates_vm_day_2:
       enable_debug_logging: true
       vault_path: "vars/vault.yml"
       vars_path: "vars/main.yml"
-      vcenter_hostname: "vcenter.{{ _global_domain_name }}"
-      datacenter_name: "{{ _global_domain_name }}"
-      datacenter_folder: "/{{ _global_domain_name }}/vm"
+      vcenter_hostname: "vcenter.{{ global_domain_name }}"
+      datacenter_name: "{{ global_domain_name }}"
+      datacenter_folder: "/{{ global_domain_name }}/vm"
       vmware_validate_certs: true
       host_list:
-        - name: testjboss2.{{ _global_domain_name }}
+        - name: testjboss2.{{ global_domain_name }}
           snap_name: testjboss2.original
           snap_description: "test base jboss build - delete me"
           quiesce: true
-        - name: testlamp2.{{ _global_domain_name }}
+        - name: testlamp2.{{ global_domain_name }}
           snap_name: testlamp2.original
           snap_description: "test base LAMP build - delete me"
           quiesce: true
-        - name: testwordpress2.{{ _global_domain_name }}
+        - name: testwordpress2.{{ global_domain_name }}
           snap_name: testwordpress2.original
           snap_description: "test base WordPress build - delete me"
           quiesce: true
@@ -159,14 +159,14 @@ templates_vm_day_2:
       enable_debug_logging: true
       vault_path: "vars/vault.yml"
       vars_path: "vars/main.yml"
-      vcenter_hostname: "vcenter.{{ _global_domain_name }}"
-      datacenter_name: "{{ _global_domain_name }}.ca"
-      datacenter_folder: "/{{ _global_domain_name }}/vm"
+      vcenter_hostname: "vcenter.{{ global_domain_name }}"
+      datacenter_name: "{{ global_domain_name }}.ca"
+      datacenter_folder: "/{{ global_domain_name }}/vm"
       vmware_validate_certs: true
       host_list:
-        - name: testjboss.{{ _global_domain_name }}
-        - name: testlamp.{{ _global_domain_name }}
-        - name: testwordpress.{{ _global_domain_name }}
+        - name: testjboss.{{ global_domain_name }}
+        - name: testlamp.{{ global_domain_name }}
+        - name: testwordpress.{{ global_domain_name }}
 
   - name: "VMwareRevertSnaps"
     description: "Revert the VM to a previous snapshot"
@@ -184,20 +184,20 @@ templates_vm_day_2:
       enable_debug_logging: true
       vault_path: "vars/vault.yml"
       vars_path: "vars/main.yml"
-      vcenter_hostname: "vcenter.{{ _global_domain_name }}"
-      datacenter_name: "{{ _global_domain_name }}.ca"
-      datacenter_folder: "/{{ _global_domain_name }}/vm"
+      vcenter_hostname: "vcenter.{{ global_domain_name }}"
+      datacenter_name: "{{ global_domain_name }}.ca"
+      datacenter_folder: "/{{ global_domain_name }}/vm"
       vmware_validate_certs: true
       host_list:
-        - name: testjboss2.{{ _global_domain_name }}
+        - name: testjboss2.{{ global_domain_name }}
           snap_name: testjboss2.original
           snap_description: "test base jboss build - delete me"
           quiesce: true
-        - name: testlamp2.{{ _global_domain_name }}
+        - name: testlamp2.{{ global_domain_name }}
           snap_name: testlamp2.original
           snap_description: "test base LAMP build - delete me"
           quiesce: true
-        - name: testwordpress2.{{ _global_domain_name }}
+        - name: testwordpress2.{{ global_domain_name }}
           snap_name: testwordpress.original
           snap_description: "test base WordPress build - delete me"
           quiesce: true
@@ -218,14 +218,14 @@ templates_vm_day_2:
       enable_debug_logging: true
       vault_path: "vars/vault.yml"
       vars_path: "vars/main.yml"
-      vcenter_hostname: "vcenter.{{ _global_domain_name }}"
-      datacenter_name: "{{ _global_domain_name }}.ca"
-      datacenter_folder: "/{{ _global_domain_name }}/vm"
+      vcenter_hostname: "vcenter.{{ global_domain_name }}"
+      datacenter_name: "{{ global_domain_name }}.ca"
+      datacenter_folder: "/{{ global_domain_name }}/vm"
       vmware_validate_certs: true
       host_list:
-        - name: testjboss.{{ _global_domain_name }}
-        - name: testlamp.{{ _global_domain_name }}
-        - name: testwordpress.{{ _global_domain_name }}
+        - name: testjboss.{{ global_domain_name }}
+        - name: testlamp.{{ global_domain_name }}
+        - name: testwordpress.{{ global_domain_name }}
 
   - name: "VMwareSuspendVM"
     description: "Suspend test machine vm - use with caution"
@@ -243,11 +243,11 @@ templates_vm_day_2:
       enable_debug_logging: true
       vault_path: "vars/vault.yml"
       vars_path: "vars/main.yml"
-      vcenter_hostname: "vcenter.{{ _global_domain_name }}"
-      datacenter_name: "{{ _global_domain_name }}.ca"
-      datacenter_folder: "/{{ _global_domain_name }}/vm"
+      vcenter_hostname: "vcenter.{{ global_domain_name }}"
+      datacenter_name: "{{ global_domain_name }}.ca"
+      datacenter_folder: "/{{ global_domain_name }}/vm"
       vmware_validate_certs: true
       host_list:
-        - name: testjboss.{{ _global_domain_name }}
-        - name: testlamp.{{ _global_domain_name }}
-        - name: testwordpress.{{ _global_domain_name }}
+        - name: testjboss.{{ global_domain_name }}
+        - name: testlamp.{{ global_domain_name }}
+        - name: testwordpress.{{ global_domain_name }}

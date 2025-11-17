@@ -7,7 +7,7 @@ redhat_manifest:
   cdn_username: "{{ cdn_username_vault }}"
   cdn_password: "{{ cdn_password_vault }}"
   content_access_mode: "org_environment"  # SCA mode
-  path: "/tmp/aapcontroller.{{ _global_domain_name }}.zip"
+  path: "/tmp/aapcontroller.{{ global_domain_name }}.zip"
   portal_url: "https://subscription.rhsm.redhat.com"
   state: present
   subs: "{{ satdev_subs_vault }}"

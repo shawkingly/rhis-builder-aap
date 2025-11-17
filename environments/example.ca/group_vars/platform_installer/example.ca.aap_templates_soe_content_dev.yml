@@ -73,7 +73,7 @@ templates_soe_dev:
       enable_debug_logging: false
       satellite_validate_certs: true
       platform_hosts:
-        - fqdn: "testjboss2.{{ _global_domain_name }}"
+        - fqdn: "testjboss2.{{ global_domain_name }}"
           delete_host: false
           organization: "Default Organization"
           location: "Default Location"
@@ -82,7 +82,7 @@ templates_soe_dev:
           compute_resource: "VMware_Lab"
           compute_profile: "2-Medium"
           mac: "00:50:56:ff:ff:ff"
-        - fqdn: "testlamp2.{{ _global_domain_name }}"
+        - fqdn: "testlamp2.{{ global_domain_name }}"
           delete_host: false
           organization: "Default Organization"
           location: "Default Location"
@@ -91,7 +91,7 @@ templates_soe_dev:
           compute_resource: "VMware_Lab"
           compute_profile: "2-Medium"
           mac: "00:50:56:ff:ff:ff"
-        - fqdn: "testwordpress2.{{ _global_domain_name }}"
+        - fqdn: "testwordpress2.{{ global_domain_name }}"
           delete_host: false
           organization: "Default Organization"
           location: "Default Location"
@@ -116,20 +116,20 @@ templates_soe_dev:
     variables:
       vault_path: "vars/vault.yml"
       vars_path: "vars/main.yml"
-      vcenter_hostname: "vcenter.{{ _global_domain_name }}"
+      vcenter_hostname: "vcenter.{{ global_domain_name }}"
       datacenter_name: "parmstrong.ca"
       datacenter_folder: "/parmstrong.ca/vm"
       vmware_validate_certs: true
       host_list:
-        - name: testjboss2.{{ _global_domain_name }}
+        - name: testjboss2.{{ global_domain_name }}
           snap_name: testjboss2.original
           snap_description: "test base jboss build - delete me"
           quiesce: true
-        - name: testlamp2.{{ _global_domain_name }}
+        - name: testlamp2.{{ global_domain_name }}
           snap_name: testlamp2.original
           snap_description: "test base LAMP build - delete me"
           quiesce: true
-        - name: testwordpress2.{{ _global_domain_name }}
+        - name: testwordpress2.{{ global_domain_name }}
           snap_name: testwordpress2.original
           snap_description: "test base WordPress build - delete me"
           quiesce: true
@@ -273,20 +273,20 @@ templates_soe_dev:
     variables:
       vault_path: "vars/vault.yml"
       vars_path: "vars/main.yml"
-      vcenter_hostname: "vcenter.{{ _global_domain_name }}"
+      vcenter_hostname: "vcenter.{{ global_domain_name }}"
       datacenter_name: "parmstrong.ca"
       datacenter_folder: "/parmstrong.ca/vm"
       vmware_validate_certs: true
       host_list:
-        - name: testjboss2.{{ _global_domain_name }}
+        - name: testjboss2.{{ global_domain_name }}
           snap_name: testjboss2.original
           snap_description: "test base jboss build - delete me"
           quiesce: true
-        - name: testlamp2.{{ _global_domain_name }}
+        - name: testlamp2.{{ global_domain_name }}
           snap_name: testlamp2.original
           snap_description: "test base LAMP build - delete me"
           quiesce: true
-        - name: testwordpress2.{{ _global_domain_name }}
+        - name: testwordpress2.{{ global_domain_name }}
           snap_name: testwordpress2.original
           snap_description: "test base WordPress build - delete me"
           quiesce: true
@@ -307,14 +307,14 @@ templates_soe_dev:
       enable_debug_logging: true
       vault_path: "vars/vault.yml"
       vars_path: "vars/main.yml"
-      vcenter_hostname: "vcenter.{{ _global_domain_name }}"
+      vcenter_hostname: "vcenter.{{ global_domain_name }}"
       datacenter_name: "parmstrong.ca"
       datacenter_folder: "/parmstrong.ca/vm"
       vmware_validate_certs: true
       host_list:
-        - name: testjboss2.{{ _global_domain_name }}
-        - name: testlamp2.{{ _global_domain_name }}
-        - name: testwordpress2.{{ _global_domain_name }}
+        - name: testjboss2.{{ global_domain_name }}
+        - name: testlamp2.{{ global_domain_name }}
+        - name: testwordpress2.{{ global_domain_name }}
 
   - name: "Dev8SDeleteTestServers"
     description: "After approval, delete JBoss, LAMP and Wordpress test machines in Dev"
@@ -331,6 +331,6 @@ templates_soe_dev:
     variables:
       enable_debug_logging: true
       host_list:
-        - name: testjboss2.{{ _global_domain_name }}
-        - name: testlamp2.{{ _global_domain_name }}
-        - name: testwordpress2.{{ _global_domain_name }}
+        - name: testjboss2.{{ global_domain_name }}
+        - name: testlamp2.{{ global_domain_name }}
+        - name: testwordpress2.{{ global_domain_name }}

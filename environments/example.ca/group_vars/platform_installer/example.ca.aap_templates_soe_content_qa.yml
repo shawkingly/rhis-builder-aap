@@ -21,7 +21,7 @@ templates_soe_qa:
       enable_debug_logging: false
       satellite_validate_certs: true
       platform_hosts:
-        - fqdn: "qatestjboss2.{{ _global_domain_name }}"
+        - fqdn: "qatestjboss2.{{ global_domain_name }}"
           delete_host: false
           organization: "Default Organization"
           location: "Default Location"
@@ -30,7 +30,7 @@ templates_soe_qa:
           compute_resource: "VMware_Lab"
           compute_profile: "2-Medium"
           mac: "00:50:56:ff:ff:ff"
-        - fqdn: "qatestlamp2.{{ _global_domain_name }}"
+        - fqdn: "qatestlamp2.{{ global_domain_name }}"
           delete_host: false
           organization: "Default Organization"
           location: "Default Location"
@@ -39,7 +39,7 @@ templates_soe_qa:
           compute_resource: "VMware_Lab"
           compute_profile: "2-Medium"
           mac: "00:50:56:ff:ff:ff"
-        - fqdn: "qatestwordpress2.{{ _global_domain_name }}"
+        - fqdn: "qatestwordpress2.{{ global_domain_name }}"
           delete_host: false
           organization: "Default Organization"
           location: "Default Location"
@@ -64,20 +64,20 @@ templates_soe_qa:
     variables:
       vault_path: "vars/vault.yml"
       vars_path: "vars/main.yml"
-      vcenter_hostname: "vcenter.{{ _global_domain_name }}"
+      vcenter_hostname: "vcenter.{{ global_domain_name }}"
       datacenter_name: "parmstrong.ca"
       datacenter_folder: "/parmstrong.ca/vm"
       vmware_validate_certs: true
       host_list:
-        - name: qatestjboss2.{{ _global_domain_name }}
+        - name: qatestjboss2.{{ global_domain_name }}
           snap_name: qatestjboss2.original
           snap_description: "test base jboss build - delete me"
           quiesce: true
-        - name: qatestlamp2.{{ _global_domain_name }}
+        - name: qatestlamp2.{{ global_domain_name }}
           snap_name: qatestlamp2.original
           snap_description: "test base LAMP build - delete me"
           quiesce: true
-        - name: qatestwordpress2.{{ _global_domain_name }}
+        - name: qatestwordpress2.{{ global_domain_name }}
           snap_name: qatestwordpress2.original
           snap_description: "test base WordPress build - delete me"
           quiesce: true
@@ -221,20 +221,20 @@ templates_soe_qa:
     variables:
       vault_path: "vars/vault.yml"
       vars_path: "vars/main.yml"
-      vcenter_hostname: "vcenter.{{ _global_domain_name }}"
+      vcenter_hostname: "vcenter.{{ global_domain_name }}"
       datacenter_name: "parmstrong.ca"
       datacenter_folder: "/parmstrong.ca/vm"
       vmware_validate_certs: true
       host_list:
-        - name: qatestjboss2.{{ _global_domain_name }}
+        - name: qatestjboss2.{{ global_domain_name }}
           snap_name: qatestjboss2.original
           snap_description: "test base jboss build - delete me"
           quiesce: true
-        - name: qatestlamp2.{{ _global_domain_name }}
+        - name: qatestlamp2.{{ global_domain_name }}
           snap_name: qatestlamp2.original
           snap_description: "test base LAMP build - delete me"
           quiesce: true
-        - name: qatestwordpress2.{{ _global_domain_name }}
+        - name: qatestwordpress2.{{ global_domain_name }}
           snap_name: qatestwordpress2.original
           snap_description: "test base WordPress build - delete me"
           quiesce: true
@@ -255,14 +255,14 @@ templates_soe_qa:
       enable_debug_logging: true
       vault_path: "vars/vault.yml"
       vars_path: "vars/main.yml"
-      vcenter_hostname: "vcenter.{{ _global_domain_name }}"
+      vcenter_hostname: "vcenter.{{ global_domain_name }}"
       datacenter_name: "parmstrong.ca"
       datacenter_folder: "/parmstrong.ca/vm"
       vmware_validate_certs: true
       host_list:
-        - name: qatestjboss2.{{ _global_domain_name }}
-        - name: qatestlamp2.{{ _global_domain_name }}
-        - name: qatestwordpress2.{{ _global_domain_name }}
+        - name: qatestjboss2.{{ global_domain_name }}
+        - name: qatestlamp2.{{ global_domain_name }}
+        - name: qatestwordpress2.{{ global_domain_name }}
 
   - name: "QA6SDeleteQATestServers"
     description: "After approval, delete JBoss, LAMP and Wordpress test machines in Qualification"
@@ -279,6 +279,6 @@ templates_soe_qa:
     variables:
       enable_debug_logging: true
       host_list:
-        - name: qatestjboss2.{{ _global_domain_name }}
-        - name: qatestlamp2.{{ _global_domain_name }}
-        - name: qatestwordpress2.{{ _global_domain_name }}
+        - name: qatestjboss2.{{ global_domain_name }}
+        - name: qatestlamp2.{{ global_domain_name }}
+        - name: qatestwordpress2.{{ global_domain_name }}

@@ -1,7 +1,7 @@
 ---
 
 inventories:
-  - name: "satellite.{{ _global_domain_name }}"
+  - name: "satellite.{{ global_domain_name }}"
     description: "demo satellite inventory"
     organization: "Default"
     state: present

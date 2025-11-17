@@ -1,14 +1,14 @@
 ---
 # this controls our build in Satellite
 
-satellite_fqdn: "satellite.{{ _global_domain_name }}"
+satellite_fqdn: "satellite.{{ global_domain_name }}"
 satellite_username: "{{ satellite_admin_username_vault }}"
 satellite_password: "{{ satellite_admin_password_vault }}"
 satellite_initial_location: "Default Location"
 satellite_initial_organization: "Default Organization"
 satellite_location: "{{ satellite_initial_location }}"
 satellite_organization: "{{ satellite_initial_organization }}"
-satellite_domain: "{{ _global_domain_name }}"
+satellite_domain: "{{ global_domain_name }}"
 satellite_url: "https://{{ satellite_fqdn }}"
 satellite_validate_certs: true
 
@@ -20,8 +20,8 @@ use_sync_build: false
 discovered_hosts_resource: "discovered_hosts"
 
 # Base network info
-_default_domain: "{{ _global_domain_name }}"
-_default_subnetname: "{{ _global_domain_name }}"
+_default_domain: "{{ global_domain_name }}"
+_default_subnetname: "{{ global_domain_name }}"
 _default_provision_iface: "eno1"
 _default_vm_provision_iface: "ens192"
 
@@ -37,7 +37,7 @@ _default_child_iface2: "enp2s0f1"
 
 # Ansible 2.4 growth deployment
 platform_hosts:
-  - fqdn: "aapcontroller24.{{ _global_domain_name }}"
+  - fqdn: "aapcontroller24.{{ global_domain_name }}"
     delete_host: false
     organization: "Default Organization"
     location: "Default Location"
@@ -57,7 +57,7 @@ platform_hosts:
         ip: "192.168.140.14"
 
 
-  - fqdn: "aaphub24.{{ _global_domain_name }}"
+  - fqdn: "aaphub24.{{ global_domain_name }}"
     delete_host: false
     organization: "Default Organization"
     location: "Default Location"
@@ -78,7 +78,7 @@ platform_hosts:
 
 # AAP 2.5 Growth Deployment
 # platform_hosts:
-#   - fqdn: "aapcontroller1.{{ _global_domain_name }}"
+#   - fqdn: "aapcontroller1.{{ global_domain_name }}"
 #     delete_host: false
 #     organization: "Default Organization"
 #     location: "Default Location"
@@ -96,7 +96,7 @@ platform_hosts:
 #         subnet: "{{ _default_subnetname }}"
 #         mac: ""
 #         ip: "192.168.140.14"
-#   - fqdn: "aaphub1.{{ _global_domain_name }}"
+#   - fqdn: "aaphub1.{{ global_domain_name }}"
 #     delete_host: false
 #     organization: "Default Organization"
 #     location: "Default Location"
@@ -114,7 +114,7 @@ platform_hosts:
 #         subnet: "{{ _default_subnetname }}"
 #         mac: ""
 #         ip: "192.168.140.15"
-#   - fqdn: "aapdb.{{ _global_domain_name }}"
+#   - fqdn: "aapdb.{{ global_domain_name }}"
 #     delete_host: false
 #     organization: "Default Organization"
 #     location: "Default Location"
@@ -132,7 +132,7 @@ platform_hosts:
 #         subnet: "{{ _default_subnetname }}"
 #         mac: ""
 #         ip: "192.168.140.16"
-#   - fqdn: "aapgateway1.{{ _global_domain_name }}"
+#   - fqdn: "aapgateway1.{{ global_domain_name }}"
 #     delete_host: false
 #     organization: "Default Organization"
 #     location: "Default Location"
@@ -150,7 +150,7 @@ platform_hosts:
 #         subnet: "{{ _default_subnetname }}"
 #         mac: ""
 #         ip: "192.168.140.17"
-#   - fqdn: "aapedacontroller.{{ _global_domain_name }}"
+#   - fqdn: "aapedacontroller.{{ global_domain_name }}"
 #     delete_host: false
 #     organization: "Default Organization"
 #     location: "Default Location"
